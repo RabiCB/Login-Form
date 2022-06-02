@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Login Here</h1>
+        <form action="https://formspree.io/f/xdoblbkl" method="">
+            <div class="input-box">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="text" placeholder="Email id">
+            </div>
+            <div class="input-box">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="text" placeholder="Password" id="psw">
+                <span onclick="myfunction()" class="eye">
+                    <i id="hide1" class="fa fa-eye"></i>
+                    <i id="hide2" class="fa fa-eye-slash"></i>
+                </span>
+            </div>
+            <button type="button" onclick="run()" class="btn">login</button>
+        </form>
+    </div>
+
+
+
+
+    <script>
+        function myfunction() {
+            var x = document.getElementById("psw");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+
+            if (x.type === "password") {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none"
+            }
+            else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
